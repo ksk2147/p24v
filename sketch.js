@@ -16,14 +16,15 @@ function setup() {
   world = engine.world;
   Engine.run(engine);
 
-  dustbin1 = new DustBin(400, 690, 200, 20, "green");
-  dustbin2 = new DustBin(500, 650, 20, 100, "green");
-  dustbin3 = new DustBin(295, 650, 200, 20, "green");
-
+  dustbin1 = new DustBin(700, 390, 200, 20, "green");
+  dustbin2 = new DustBin(800, 350, 20, 100, "green");
+  dustbin3 = new DustBin(595, 350, 20, 100, "green");
+ 
   paper = new Paper(100, 300, 10);
   ground = Bodies.rectangle(width / 2, 400, width, 10,
   {
     isStatic: true
+
   });
   World.add(world, ground);
 }
@@ -31,6 +32,7 @@ function setup() {
 function draw() {
     rectMode(CENTER);
     background(0);
+
     dustbin1.display();
     dustbin2.display();
     dustbin3.display();
